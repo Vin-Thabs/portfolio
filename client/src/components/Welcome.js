@@ -1,10 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import "../styles/Welcome.css";
+import { useNavigate } from "react-router-dom";
+
 
 function StartButton() {
+  const navigate = useNavigate();
+
+  function handleClick()
+  {
+    navigate('/about');
+  }
   return (
-    <button className="Start-btn">
+    <button className="Start-btn" onClick={handleClick}>
       <span>Start Experience</span>
     </button>
   );
