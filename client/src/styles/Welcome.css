@@ -1,0 +1,101 @@
+
+.Welcome-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.three-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  text-align: center;
+  color: #ffffff;
+  animation: fadeIn 2s ease-in-out;
+  backdrop-filter: blur(3px);
+}
+
+.welcome-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 2.5rem;
+  opacity: 0.8;
+}
+
+.Start-btn {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.Start-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.9);
+}
+
+.Start-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.Start-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent);
+  transition: all 0.5s;
+}
+
+.Start-btn:hover::before {
+  left: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
