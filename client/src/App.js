@@ -1,5 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
-import Welcome from "./components/Welcome";
+import Welcome from "./pages/Welcome";
+import Main from './pages/Main';
 
 function About()
 {
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/" element={< Welcome />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/main" element={<Main />}/>
       </Routes>
 
       
