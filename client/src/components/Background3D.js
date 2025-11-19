@@ -26,7 +26,6 @@ export default function Background3D() {
     renderer.setPixelRatio(window.devicePixelRatio);
     mount.appendChild(renderer.domElement);
 
-    // 🌌 GALAXY CONFIG
     const galaxyParams = {
       count: 6000,
       size: 0.02,
@@ -39,22 +38,17 @@ export default function Background3D() {
       outsideColor: new THREE.Color("#4da6ff"),
     };
 
-    // 🌌 Build Spiral Galaxy
     const positions = new Float32Array(galaxyParams.count * 3);
     const colors = new Float32Array(galaxyParams.count * 3);
 
     for (let i = 0; i < galaxyParams.count; i++) {
       const i3 = i * 3;
 
-      // Distance from center
       const radius = Math.random() * galaxyParams.radius;
-
-      // Angle based on which arm the particle belongs to
       const spinAngle = radius * galaxyParams.spin;
       const branchAngle =
         ((i % galaxyParams.arms) / galaxyParams.arms) * Math.PI * 2;
 
-      // Random offset (gives chaos)
       const randomX =
         Math.pow(Math.random(), galaxyParams.randomnessPower) *
         (Math.random() < 0.5 ? 1 : -1) *
@@ -70,14 +64,12 @@ export default function Background3D() {
         (Math.random() < 0.5 ? 1 : -1) *
         galaxyParams.randomness;
 
-      // Position using spiral formula
       positions[i3 + 0] =
         Math.cos(branchAngle + spinAngle) * radius + randomX;
-      positions[i3 + 1] = randomY * 0.5; // galaxy thickness
+      positions[i3 + 1] = randomY * 0.5;
       positions[i3 + 2] =
         Math.sin(branchAngle + spinAngle) * radius + randomZ;
 
-      // Color interpolation: inside → outside
       const mixedColor = galaxyParams.insideColor.clone();
       mixedColor.lerp(galaxyParams.outsideColor, radius / galaxyParams.radius);
 
@@ -86,7 +78,6 @@ export default function Background3D() {
       colors[i3 + 2] = mixedColor.b;
     }
 
-    // Build geometry
     const galaxyGeometry = new THREE.BufferGeometry();
     galaxyGeometry.setAttribute(
       "position",
@@ -94,7 +85,6 @@ export default function Background3D() {
     );
     galaxyGeometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
 
-    // Material
     const galaxyMaterial = new THREE.PointsMaterial({
       size: galaxyParams.size,
       depthWrite: false,
@@ -105,31 +95,71 @@ export default function Background3D() {
     const galaxyPoints = new THREE.Points(galaxyGeometry, galaxyMaterial);
     scene.add(galaxyPoints);
 
-    // Mouse movement
-    const mouse = { x: 0, y: 0 };
-    window.addEventListener("mousemove", (e) => {
-      mouse.x = (e.clientX / window.innerWidth - 0.5) * 2;
-      mouse.y = -(e.clientY / window.innerHeight - 0.5) * 2;
-    });
+    const shootingStars = [];
+    const maxShootingStars = 4;
 
-    // Animation loop
+    function createShootingStar() {
+      const length = Math.random() * 0.7 + 0.3;
+
+      const geometry = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(0, 0, 0),
+        new THREE.Vector3(-length, -length * 0.4, 0),
+      ]);
+
+      const material = new THREE.LineBasicMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 1,
+      });
+
+      const star = new THREE.Line(geometry, material);
+
+      star.position.set(
+        (Math.random() - 0.5) * 10,
+        Math.random() * 5 + 2,
+        (Math.random() - 0.5) * 4
+      );
+
+      star.speed = 0.05 + Math.random() * 0.05;
+      star.opacity = 1;
+
+      shootingStars.push(star);
+      scene.add(star);
+    }
+
+    function updateShootingStars() {
+      shootingStars.forEach((star, i) => {
+        star.position.x -= star.speed * 2;
+        star.position.y -= star.speed;
+        star.material.opacity -= 0.01;
+
+        if (star.material.opacity <= 0) {
+          scene.remove(star);
+          shootingStars.splice(i, 1);
+        }
+      });
+
+      if (shootingStars.length < maxShootingStars) {
+        if (Math.random() < 0.015) {
+          createShootingStar();
+        }
+      }
+    }
+
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Rotate galaxy
       galaxyPoints.rotation.y += 0.0008;
       galaxyPoints.rotation.x += 0.0002;
 
-      // Parallax camera movement
-      camera.position.x += (mouse.x * 0.6 - camera.position.x) * 0.05;
-      camera.position.y += (mouse.y * 0.6 - camera.position.y) * 0.05;
+      updateShootingStars();
+
 
       renderer.render(scene, camera);
     };
 
     animate();
 
-    // Responsive resize
     const handleResize = () => {
       camera.aspect = mount.clientWidth / mount.clientHeight;
       camera.updateProjectionMatrix();
