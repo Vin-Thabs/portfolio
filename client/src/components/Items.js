@@ -6,11 +6,11 @@
 
 import '../styles/Items.css';
 
-export default function Items({name})
-{
-    return(
-        <section className="item-section">
-            <h3 className="item-tittle">{name}</h3>
+export default function Items({ name, description }) {
+    return (
+        <section className="item-tile">
+            <h2 className="item-title">{name}</h2>
+            <p className="item-description">{description}</p>
         </section>
-    )
+    );
 }

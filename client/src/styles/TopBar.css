@@ -1,8 +1,5 @@
-/**
-* Styling: The Menu icon
-*/
-.menu-icon
-{
+/* Menu Icon */
+.menu-icon {
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -14,39 +11,72 @@
     opacity: 0.8;
 }
 
-
-/**
-*Styling: Profile Icon
-*/
-
-.profile-icon
-{
-    width: 90px;
-    height: 90px;
+/* Profile Icon */
+.profile-icon {
+    width: 60px; /* reduced default size for better mobile fit */
+    height: 60px;
     cursor: pointer;
     position: relative;
+}
 
-} 
-
-
-/**
-* Styling: TopBar items
-*/
-.TopBar-container
-{
+/* TopBar container */
+.TopBar-container {
     display: flex;
-    padding: 0 50px;
+    padding: 0 20px; /* reduced padding for small screens */
     justify-content: space-between;
     align-items: center;
     background-color: lightblue;
+    flex-wrap: wrap; /* allow items to wrap on small screens */
 }
 
-.dashboard-tittle{
-    font-size: 3rem;
+/* Dashboard title */
+.dashboard-title {
+    font-size: 2rem; /* smaller by default */
     font-weight: 700;
     letter-spacing: 1px;
     background: linear-gradient(90deg, #346a7a, #957fd6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+    margin: 0 10px; /* small horizontal margin */
+    flex: 1; /* allows title to grow/shrink */
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .dashboard-title {
+        font-size: 3rem; /* larger for tablets and above */
+    }
+
+    .profile-icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .TopBar-container {
+        padding: 0 50px;
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .profile-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dashboard-title {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .TopBar-container {
+        flex-direction: column;
+        padding: 10px;
+    }
 }
