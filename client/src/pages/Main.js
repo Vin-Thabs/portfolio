@@ -1,4 +1,5 @@
-import {TopBar} from '../components/TopBar';
+import TopBar from '../components/TopBar.js';
+
 
 export default function Main()
 {

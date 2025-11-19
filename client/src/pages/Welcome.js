@@ -9,7 +9,7 @@ function StartButton() {
 
   function handleClick()
   {
-    navigate('/about');
+    navigate('/main');
   }
   return (
     <button className="Start-btn" onClick={handleClick}>

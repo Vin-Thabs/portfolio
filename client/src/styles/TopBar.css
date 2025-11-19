@@ -1,0 +1,52 @@
+/**
+* Styling: The Menu icon
+*/
+.menu-icon
+{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+
+/**
+*Styling: Profile Icon
+*/
+
+.profile-icon
+{
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    position: relative;
+
+} 
+
+
+/**
+* Styling: TopBar items
+*/
+.TopBar-container
+{
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.dashboard-tittle{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #346a7a, #957fd6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
