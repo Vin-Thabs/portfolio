@@ -12,9 +12,9 @@ export default function TopBar()
 {
     return(
        <div className="TopBar-container">
-            <img alt="menu" src={menuIcon} className="menu-icon" />
+            <img alt="menu" src={menuIcon} className="menu-icon" title='Menu'/>
             <h1 className='dashboard-tittle'>Dashboard</h1>
-            <img alt='profile-picture' src={profile} data-tooltip="About Me" className='profile-icon' />
+            <img alt='profile' src={profile} className='profile-icon'  title="About Me" />
        </div>
     )
 }

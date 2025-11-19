@@ -1,4 +1,9 @@
-#menu-icon
+.main-content
 {
-    size: 20px;
+    display: grid;
+    
+   /* justify-content: space-around; */
+    grid-template-columns: repeat(3, 100px); /* 3 columns only */
+    gap: 10px;
+    align-content: center;
 }

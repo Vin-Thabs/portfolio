@@ -1,25 +1,8 @@
 import {Routes, Route} from 'react-router-dom';
 import Welcome from "./pages/Welcome";
-import Main from './pages/Main';
+import Home from './pages/Home';
 
-function About()
-{
-  return(
-    <h1>
-      About Me
-    </h1>
-  )
-}
 
-function Contact()
-{
-  return (
-    <h1>
-      Contact me
-    </h1>
-  )
-
-}
 
 export default function App() {
     
@@ -27,10 +10,8 @@ export default function App() {
     <div className="Main-app">
       {/* Routes */}
       <Routes>
-        <Route path="/" element={< Welcome />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/main" element={<Main />}/>
+        <Route path='/' element={<Welcome />}/>
+        <Route path="/main" element={<Home />}/>
       </Routes>
 
       
