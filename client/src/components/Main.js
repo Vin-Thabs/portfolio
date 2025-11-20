@@ -9,8 +9,7 @@ import Background3D from './Background3D';
 import '../styles/Main.css';
 import { useState } from 'react';
 import {items_tiles} from './Utils/data';
-import Projects from '../components/content/Projects';
-import Hackathons from '../components/content/Hackathons';
+import { ContentMaps } from './Utils/ContentMap';
 
 
 export default function Main() {
@@ -41,10 +40,7 @@ export default function Main() {
         )
     }
 
-    const ContentMap = {
-        'Projects': <Projects />,
-        'Hackathons': <Hackathons />
-    }
+    const ContentMap = ContentMaps;
 
     return (
         selected === null
