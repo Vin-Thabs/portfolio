@@ -7,18 +7,24 @@
 import Items from './Items';
 import Background3D from './Background3D';
 import '../styles/Main.css';
+import { useState } from 'react';
+import {items_tiles} from './Utils/data';
+import Projects from '../components/content/Projects';
+import Hackathons from '../components/content/Hackathons';
+
 
 export default function Main() {
-    const items_tiles = [
-        { id: 1, name: 'Projects', description: 'A collection of applications I have built.' },
-        { id: 2, name: 'Skills', description: 'Technical and soft skills I have developed.' },
-        { id: 3, name: 'Working Experience', description: 'Professional work roles and responsibilities.' },
-        { id: 4, name: 'Hackathons', description: 'Competitions and hackathon achievements.' },
-        { id: 5, name: 'Interests', description: 'Topics and activities I enjoy exploring.' },
-    ];
 
-    return (
-       <div className="main-wrapper">
+    const [selected, setSelected] = useState(null);
+
+    function HandleClick(content)
+    {
+        setSelected(content);
+    }
+    function MainContent() {
+
+        return(
+            <div className="main-wrapper">
             <Background3D />
 
             <main className="main-content">
@@ -27,9 +33,22 @@ export default function Main() {
                         key={item.id} 
                         name={item.name} 
                         description={item.description} 
+                        onClick={() => HandleClick(item.name)}
                     />
                 ))}
             </main>
         </div>
+        )
+    }
+
+    const ContentMap = {
+        'Projects': <Projects />,
+        'Hackathons': <Hackathons />
+    }
+
+    return (
+        selected === null
+      ? <MainContent /> 
+      : ContentMap[selected]
     );
 }

@@ -6,9 +6,9 @@
 
 import '../styles/Items.css';
 
-export default function Items({ name, description }) {
+export default function Items({ name, description, onClick }) {
     return (
-        <section className="item-tile">
+        <section className="item-tile" onClick={onClick}>
             <h2 className="item-title">{name}</h2>
             <p className="item-description">{description}</p>
         </section>
