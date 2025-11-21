@@ -17,7 +17,6 @@ export default function ProjectDetails({ project, onClose }) {
                         <iframe
                             src={project.demo_video}
                             title="Project Demo"
-                            frameBorder="0"
                             allowFullScreen
                         ></iframe>
                     </div>
