@@ -6,6 +6,15 @@ export default function Background3D() {
 
   useEffect(() => {
     const mount = mountRef.current;
+    if (!mount) return;
+
+    // --- Ensure mount has dimensions before initializing ---
+    const getSize = () => ({
+      width: mount.clientWidth || window.innerWidth,
+      height: mount.clientHeight || window.innerHeight,
+    });
+
+    const { width, height } = getSize();
 
     // Scene
     const scene = new THREE.Scene();
@@ -14,7 +23,7 @@ export default function Background3D() {
     // Camera
     const camera = new THREE.PerspectiveCamera(
       60,
-      mount.clientWidth / mount.clientHeight,
+      width / height,
       0.1,
       1000
     );
@@ -22,10 +31,11 @@ export default function Background3D() {
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(mount.clientWidth, mount.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // cap for mobile performance
     mount.appendChild(renderer.domElement);
 
+    // ---- GALAXY CODE (unchanged) ----
     const galaxyParams = {
       count: 6000,
       size: 0.02,
@@ -64,7 +74,7 @@ export default function Background3D() {
         (Math.random() < 0.5 ? 1 : -1) *
         galaxyParams.randomness;
 
-      positions[i3 + 0] =
+      positions[i3] =
         Math.cos(branchAngle + spinAngle) * radius + randomX;
       positions[i3 + 1] = randomY * 0.5;
       positions[i3 + 2] =
@@ -73,7 +83,7 @@ export default function Background3D() {
       const mixedColor = galaxyParams.insideColor.clone();
       mixedColor.lerp(galaxyParams.outsideColor, radius / galaxyParams.radius);
 
-      colors[i3 + 0] = mixedColor.r;
+      colors[i3] = mixedColor.r;
       colors[i3 + 1] = mixedColor.g;
       colors[i3 + 2] = mixedColor.b;
     }
@@ -95,6 +105,7 @@ export default function Background3D() {
     const galaxyPoints = new THREE.Points(galaxyGeometry, galaxyMaterial);
     scene.add(galaxyPoints);
 
+    // ---- SHOOTING STARS (unchanged) ----
     const shootingStars = [];
     const maxShootingStars = 4;
 
@@ -140,12 +151,11 @@ export default function Background3D() {
       });
 
       if (shootingStars.length < maxShootingStars) {
-        if (Math.random() < 0.015) {
-          createShootingStar();
-        }
+        if (Math.random() < 0.015) createShootingStar();
       }
     }
 
+    // ---- ANIMATION LOOP ----
     const animate = () => {
       requestAnimationFrame(animate);
 
@@ -153,25 +163,37 @@ export default function Background3D() {
       galaxyPoints.rotation.x += 0.0002;
 
       updateShootingStars();
-
-
       renderer.render(scene, camera);
     };
 
     animate();
 
+    // --- RESIZE HANDLER (mobile-safe + pixelRatio update) ---
     const handleResize = () => {
-      camera.aspect = mount.clientWidth / mount.clientHeight;
+      const { width, height } = getSize();
+      camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      renderer.setSize(mount.clientWidth, mount.clientHeight);
-    };
-    window.addEventListener("resize", handleResize);
 
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    };
+
+    const debounceResize = () => {
+      clearTimeout(debounceResize.t);
+      debounceResize.t = setTimeout(handleResize, 200);
+    };
+
+    window.addEventListener("resize", debounceResize);
+
+    // Cleanup
     return () => {
       mount.removeChild(renderer.domElement);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", debounceResize);
+      renderer.dispose();
+      galaxyGeometry.dispose();
+      galaxyMaterial.dispose();
     };
   }, []);
 
-  return <div ref={mountRef} className="main-bg"></div>;
+  return <div ref={mountRef} className="main-bg" style={{ width: "100%", height: "100%" }}></div>;
 }

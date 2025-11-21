@@ -7,18 +7,19 @@
 import Items from './Items';
 import Background3D from './Background3D';
 import '../styles/Main.css';
-import { useState } from 'react';
+// import { useState } from 'react';
 import {items_tiles} from './Utils/data';
-import { ContentMaps } from './Utils/ContentMap';
-
+// import { ContentMaps } from './Utils/ContentMap';
+import { useNavigate } from "react-router-dom";
 
 export default function Main() {
 
-    const [selected, setSelected] = useState(null);
-
+    // const [selected, setSelected] = useState(null);
+    const navigate = useNavigate();
     function HandleClick(content)
     {
-        setSelected(content);
+        // setSelected(content);
+        navigate(`/${content}`);
     }
     function MainContent() {
 
@@ -40,11 +41,10 @@ export default function Main() {
         )
     }
 
-    const ContentMap = ContentMaps;
-
     return (
-        selected === null
-      ? <MainContent /> 
-      : ContentMap[selected]
+    //     selected === null
+    //   ? <MainContent /> 
+    //   : ContentMap[selected]
+        <MainContent />
     );
 }

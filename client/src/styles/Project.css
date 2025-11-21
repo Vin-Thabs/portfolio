@@ -1,41 +1,64 @@
 .project-container {
-    width: 80%;
-    margin: 40px auto;
-    padding: 2rem;
-    background: #f7f7f7;
-    border-radius: 12px;
-    position: relative;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    gap: 25px;
+    padding: 40px;
 }
 
-
 .projects-information {
-    background: white;
-    padding: 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 16px;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
 
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+.projects-information:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .project-name {
-    margin: 0;
-    font-size: 1.3rem;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-short-description {
+    opacity: 0.9;
+    margin-bottom: 12px;
+}
+
+.tech-stack {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 15px;
 }
 
 .more-btn {
-    align-self: flex-start;
-    padding: 0.4rem 0.8rem;
-    background: #0077ff;
-    color: white;
+    padding: 10px 16px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    background: #4aa8ff;
+    color: #fff;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.more-btn:hover {
+    background: #1c8fff;
+    transform: scale(1.04);
+}
+
+
+.main-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: none;
 }

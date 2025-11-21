@@ -16,5 +16,5 @@ export const ContentMaps = {
     'Hackathons': <Hackathons />,
     'Skills': <Skills />,
     'Interests': <Interests />,
-    'WorkExperience': <WorkExperience />
+    'WorkingExperience': <WorkExperience />
 }
