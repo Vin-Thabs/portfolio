@@ -1,5 +1,5 @@
 import '../../styles/Project.css';
-import TopBar from '../TopBar';
+// import TopBar from '../TopBar';
 import Background3D from '../Background3D';
 import { useState } from 'react';
 import ProjectDetails from '../ProjectDetails';
@@ -57,7 +57,7 @@ export default function Projects() {
     return (
         <>
             <Background3D />
-            <TopBar />
+            {/* <TopBar /> */}
 
             <section className="project-container">
                 {projects.map(project => (
