@@ -1,21 +1,22 @@
-/* Full page container */
 .skills-page {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    position: relative;
+
+    padding: 120px 40px 40px;
+
     width: 90%;
     max-width: 800px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.1); /* semi-transparent */
-    backdrop-filter: blur(10px); /* blurry effect */
+    margin: 100px auto; 
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(218, 206, 206, 0.3);
     color: white;
+    z-index: 2000;
 }
 
-/* Page Title */
+
 .skills-title {
     font-size: 3rem;
     text-align: center;
@@ -23,14 +24,12 @@
     font-weight: 700;
 }
 
-/* Section Titles */
 .section-title {
     font-size: 1.6rem;
     margin: 25px 0 12px 0;
     font-weight: 600;
 }
 
-/* Subtitles */
 .sub-title {
     font-size: 1.3rem;
     margin: 18px 0 10px 0;
@@ -47,14 +46,14 @@
     color: #e0e0e0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 700px) {
     .skills-page {
         width: 95%;
-        padding: 25px;
+        padding: 120px 25px 25px; /* Top padding still needed */
     }
 
     .skills-title {
         font-size: 2.5rem;
     }
 }
+

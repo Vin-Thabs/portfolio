@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/Hackathons.css";
 import Background3D from '../Background3D';
+import TopBar from '../TopBar';
 
 export default function Hackathons() {
 
@@ -14,6 +15,7 @@ export default function Hackathons() {
     return (
         <div className="hackathons-container">
             <Background3D />
+            <TopBar />
             <h1 className="hackathons-title">Hackathons</h1>
 
             <div className="hackathon-grid">

@@ -1,16 +1,17 @@
 import '../../styles/Skills.css';
 import Background3D from '../Background3D';
+import TopBar from '../TopBar';
 
 export default function Skills() {
     return (
         <>
+            <TopBar />
             <Background3D />
 
             <section className="skills-page">
 
                 <h1 className="skills-title">Skills</h1>
 
-                {/* Programming Languages */}
                 <div className="skill-section">
                     <h2 className="section-title">Programming Languages</h2>
 
@@ -62,7 +63,7 @@ export default function Skills() {
                     </ul>
                 </div>
 
-                {/* Foundations */}
+               
                 <div className="skill-section">
                     <h2 className="section-title">CS Fundamentals & Machine Learning</h2>
 

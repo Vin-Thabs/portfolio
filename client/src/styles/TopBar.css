@@ -13,7 +13,7 @@
 
 /* Profile Icon */
 .profile-icon {
-    width: 60px; /* reduced default size for better mobile fit */
+    width: 60px;
     height: 60px;
     cursor: pointer;
     position: relative;
@@ -21,31 +21,37 @@
 
 /* TopBar container */
 .TopBar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
     display: flex;
-    padding: 0 20px; /* reduced padding for small screens */
+    padding: 0 20px;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(19, 176, 228);
-    flex-wrap: wrap; /* allow items to wrap on small screens */
+    flex-wrap: wrap;
+    z-index: 1000;
 }
 
 /* Dashboard title */
 .dashboard-title {
-    font-size: 2rem; /* smaller by default */
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
     background: linear-gradient(90deg, #346a7a, #957fd6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0 10px; /* small horizontal margin */
-    flex: 1; /* allows title to grow/shrink */
+    margin: 0 10px;
+    flex: 1;
     text-align: center;
 }
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .dashboard-title {
-        font-size: 3rem; /* larger for tablets and above */
+        font-size: 3rem;
     }
 
     .profile-icon {

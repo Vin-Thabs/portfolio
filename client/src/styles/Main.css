@@ -3,7 +3,7 @@
     z-index: 2;
     display: grid;
     gap: 50px;
-    padding: 30px;
+    padding: 120px 30px 30px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-content: center;
     justify-content: center;
