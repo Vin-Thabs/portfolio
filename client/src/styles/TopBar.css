@@ -19,7 +19,6 @@
     position: relative;
 }
 
-/* TopBar container */
 .TopBar-container {
     position: fixed;
     top: 0;
@@ -27,7 +26,7 @@
     width: 100%;
     height: 80px; 
     display: flex;
-    padding: 0 20px;
+    padding: 50px 20px;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(19, 176, 228);
