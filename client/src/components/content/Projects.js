@@ -41,8 +41,8 @@ export default function Projects() {
         return (
             <section className="projects-information">
                 <h2 className="project-name">{project.name}</h2>
-                <p className="project-short-description">{project.short_description}</p>
-                <p className="tech-stack">{project.tech_stack.join(", ")}</p>
+                <p className="project-short-description"> <strong> Description:  </strong>{project.short_description}</p>
+                <p className="tech-stack"> <strong> Tech stack:   </strong>{project.tech_stack.join(", ")}</p>
 
                 <button 
                     className="more-btn"
