@@ -8,21 +8,21 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            name: 'Weather App',
-            short_description: 'An application to display the state of the weather in a specific location',
-            long_description: 'This Weather App fetches real-time data from an external weather API allowing users to view temperature, humidity, wind speed and forecast data. The UI is built in React, and Node.js handles API calls for better security and caching.',
-            tech_stack: ['JavaScript', 'ReactJs', 'Nodejs'],
+            name: 'RoboCup-AI',
+            short_description: 'AI agent to play soccer against another AI agent/itself',
+            long_description: 'The RoboCup 3D Soccer Simulation League, using Hungarian algorithm to find the best position for players, A* for optimal paths to goal',
+            tech_stack: ['python', 'C/C++', 'bash'],
             demo_video: 'https://www.youtube.com/watch?v=fvkqMN-t1l4',
-            github: 'https://github.com/username/weather-app'
+            github: 'https://github.com/Vin-Thabs/RoboCup-AI.git'
         },
         {
             id: 2,
-            name: 'Shell',
-            short_description: 'A command line interface to run bash scripts',
-            long_description: 'This project is a custom Unix Shell implementation in C. It supports basic commands, piping, redirection, background execution, and environment variable handling.',
-            tech_stack: ['C'],
+            name: 'University Research Collaboration Platform',
+            short_description: 'A platform for researchers to find others to collaborate with',
+            long_description: 'This project, helps researchers to find other researchers to collaborate with, also find research to donate funds to. Export data about research topic',
+            tech_stack: ['Javascript', 'ReactJs', 'MySQL', 'Azure', 'CI/CD pipeline (GitHub Actions)', 'TDD(Test Driven Development)'],
             demo_video: 'https://www.youtube.com/watch?v=fvkqMN-t1l4',
-            github: 'https://github.com/username/shell-project'
+            github: 'https://github.com/Vin-Thabs/Uni-Research-Collab-Platform.git'
         },
         {
             id: 3,
