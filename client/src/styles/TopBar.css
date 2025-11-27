@@ -1,3 +1,22 @@
+/* Top Navigation Container */
+.TopBar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;           /* ❗ smaller and responsive */
+    background-color: rgb(66, 31, 95);
+
+    z-index: 1000;
+    box-sizing: border-box;    /* prevents overflow */
+}
+
 /* Menu Icon */
 .menu-icon {
     width: 40px;
@@ -11,78 +30,43 @@
     opacity: 0.8;
 }
 
-/* Profile Icon */
-.profile-icon {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    position: relative;
-}
-
-.TopBar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px; 
-    display: flex;
-    padding: 50px 20px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(66, 31, 95);
-    flex-wrap: wrap;
-    z-index: 1000;
-}
-
-/* Dashboard title */
-.dashboard-title {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    /* background: linear-gradient(90deg, #346a7a, #957fd6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    margin: 0 10px;
+/* Name / Title */
+.dev-ingo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin: 0;
     flex: 1;
     text-align: center;
-    color: rgb(170, 165, 165);
 }
 
-/* Responsive adjustments */
+/* ====================== */
+/*      RESPONSIVE        */
+/* ====================== */
+
 @media (min-width: 768px) {
-    .dashboard-title {
-        font-size: 3rem;
-    }
-
-    .profile-icon {
-        width: 90px;
-        height: 90px;
-    }
-
     .TopBar-container {
-        padding: 0 50px;
-        flex-wrap: nowrap;
+        height: 80px;
+        padding: 0 40px;
+    }
+
+    .dev-ingo {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 480px) {
     .menu-icon {
-        width: 35px;
-        height: 35px;
-    }
-
-    .profile-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .dashboard-title {
-        font-size: 1.5rem;
-        margin: 10px 0;
+        width: 32px;
+        height: 32px;
     }
 
     .TopBar-container {
-        flex-direction: column;
-        padding: 10px;
+        height: 60px;
+        padding: 0 12px;
+    }
+
+    .dev-ingo {
+        font-size: 1.2rem;
     }
 }
