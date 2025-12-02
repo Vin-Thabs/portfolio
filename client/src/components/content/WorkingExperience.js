@@ -8,7 +8,14 @@ export default function WorkingExperience() {
             <TopBar />
             <Background3D />
             <section className="working-exp-container">
-                <h1 className="working-exp-title">Working Experience</h1>
+                 <h1 className="working-exp-title">Working Experience</h1>
+                <div className="company-logo-wrapper">
+                    <img 
+                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.hFXdGBzbE63MJKY0QxoyggHaEK%3Fpid%3DApi&f=1&ipt=7a5fcbcbc05289f16321c3e924f3f1727e09eb15123db8761a5d9e3c803b1246&ipo=images"  
+                        alt="Nu Metro Logo"
+                        className="company-logo"
+                    />
+                </div>
 
                 <p className="company-name">
                     <strong>Company:</strong> Nu Metro

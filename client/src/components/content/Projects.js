@@ -35,7 +35,7 @@ export default function Projects() {
         },
         {
             id: 4, 
-            name: Gurdia,
+            name: 'Gurdia',
             short_description: 'Gurdia is a well improved web application to minimize crime risks in certain areas',
             long_description: "Users can view high-risk zones, recent incidents reports, and receive route safety recommendations, empowering them to make informed decisions. Especially against women and children. Also through analyzing and displaying real-time and historic crime data  on an interactive map",
             tech_stack: ['ReactJS', 'Express', 'MySQL', 'Azure'],
