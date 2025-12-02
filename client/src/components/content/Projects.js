@@ -26,12 +26,21 @@ export default function Projects() {
         },
         {
             id: 3,
-            name: 'FndFunder',
+            name: 'FindFunder',
             short_description: 'Funding Management is Software solution used to management funds for funding',
             long_description: 'This project is a funding management, for funding for users. Users can donate funds, advertise the program that needs funds, upload PDFs with more information about the project that needs funding ',
             tech_stack: ['ReactJS', 'Azure Functions', 'GitHub Actions (CI/CD)', 'Azure', 'Firebase', 'MySQL'],
             demo_video: 'https://www.youtube.com/watch?v=1dVmYSSY_NU&feature=youtu.be',
             github: 'https://github.com/Vin-Thabs/funding-management.git'
+        },
+        {
+            id: 4, 
+            name: Gurdia,
+            short_description: 'Gurdia is a well improved web application to minimize crime risks in certain areas',
+            long_description: "Users can view high-risk zones, recent incidents reports, and receive route safety recommendations, empowering them to make informed decisions. Especially against women and children. Also through analyzing and displaying real-time and historic crime data  on an interactive map",
+            tech_stack: ['ReactJS', 'Express', 'MySQL', 'Azure'],
+            demo_video: '',
+            github: 'https://github.com/Vin-Thabs/guardia.git'
         }
     ];
 
