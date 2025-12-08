@@ -17,6 +17,7 @@ export default function ProjectDetails({ project, onClose }) {
                         <iframe
                             src={project.demo_video}
                             title="Project Demo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
                     </div>

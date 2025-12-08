@@ -10,14 +10,13 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 20px;           /* ❗ smaller and responsive */
+    padding: 0 20px;        
     background-color: rgb(66, 31, 95);
 
     z-index: 1000;
-    box-sizing: border-box;    /* prevents overflow */
+    box-sizing: border-box;   
 }
 
-/* Menu Icon */
 .menu-icon {
     width: 40px;
     height: 40px;
@@ -30,7 +29,6 @@
     opacity: 0.8;
 }
 
-/* Name / Title */
 .dev-ingo {
     font-size: 1.6rem;
     font-weight: 600;
@@ -40,9 +38,51 @@
     text-align: center;
 }
 
-/* ====================== */
-/*      RESPONSIVE        */
-/* ====================== */
+
+.dropdown-menu {
+    position: absolute;
+    top: 70px; 
+    left: 20px;
+
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 8px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 2000;
+    animation: fadeSlide 0.25s ease;
+}
+
+.dropdown-menu p {
+    margin: 0;
+    padding: 12px 18px;
+    font-size: 1rem;
+    color: rgb(40, 40, 40);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu p:hover {
+    background-color: rgba(66, 31, 95, 0.1);
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 @media (min-width: 768px) {
     .TopBar-container {
@@ -52,6 +92,10 @@
 
     .dev-ingo {
         font-size: 2rem;
+    }
+
+    .dropdown-menu {
+        top: 80px;
     }
 }
 
@@ -68,5 +112,10 @@
 
     .dev-ingo {
         font-size: 1.2rem;
+    }
+
+    .dropdown-menu {
+        top: 60px;
+        width: 170px;
     }
 }

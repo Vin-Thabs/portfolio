@@ -23,7 +23,6 @@ export default function Skills() {
                     </ul>
                 </div>
 
-                {/* Frameworks */}
                 <div className="skill-section">
                     <h2 className="section-title">Frameworks</h2>
 
@@ -33,7 +32,6 @@ export default function Skills() {
                     </ul>
                 </div>
 
-                {/* Soft Skills */}
                 <div className="skill-section">
                     <h2 className="section-title">Soft Skills</h2>
 
@@ -45,7 +43,6 @@ export default function Skills() {
                     </ul>
                 </div>
 
-                {/* DevOps & Networking */}
                 <div className="skill-section">
                     <h2 className="section-title">DevOps & Cloud</h2>
 

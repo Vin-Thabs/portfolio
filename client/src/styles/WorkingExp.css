@@ -4,14 +4,11 @@
     max-width: 650px;
     border-radius: 12px;
 
-    /* Glass / blurry background */
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
 
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-
-    /* All text white by default */
     color: white;
 }
 
@@ -21,7 +18,6 @@
     margin-bottom: 12px;
     color: white;
 
-    /* Center the title */
     text-align: center;
 }
 
@@ -40,4 +36,19 @@
 
 .responsibility-list li {
     margin-bottom: 6px;
+}
+
+.company-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    width: 250px;          
+    height: auto;
+    object-fit: contain;
+
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+    border-radius: 8px;
 }

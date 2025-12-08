@@ -12,7 +12,6 @@ export default function App() {
     
   return (
     <div className="Main-app">
-      {/* Routes */}
       <Routes>
         <Route path='/' element={<Welcome />}/>
         <Route path="/main" element={<Home />}/>
