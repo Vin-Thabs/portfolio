@@ -8,7 +8,6 @@ export default function Background3D() {
     const mount = mountRef.current;
     if (!mount) return;
 
-    // --- Ensure mount has dimensions before initializing ---
     const getSize = () => ({
       width: mount.clientWidth || window.innerWidth,
       height: mount.clientHeight || window.innerHeight,
@@ -35,7 +34,6 @@ export default function Background3D() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // cap for mobile performance
     mount.appendChild(renderer.domElement);
 
-    // ---- GALAXY CODE (unchanged) ----
     const galaxyParams = {
       count: 6000,
       size: 0.02,
@@ -105,9 +103,8 @@ export default function Background3D() {
     const galaxyPoints = new THREE.Points(galaxyGeometry, galaxyMaterial);
     scene.add(galaxyPoints);
 
-    // ---- SHOOTING STARS (unchanged) ----
     const shootingStars = [];
-    const maxShootingStars = 4;
+    const maxShootingStars = 8;
 
     function createShootingStar() {
       const length = Math.random() * 0.7 + 0.3;
@@ -155,7 +152,6 @@ export default function Background3D() {
       }
     }
 
-    // ---- ANIMATION LOOP ----
     const animate = () => {
       requestAnimationFrame(animate);
 
@@ -168,7 +164,6 @@ export default function Background3D() {
 
     animate();
 
-    // --- RESIZE HANDLER (mobile-safe + pixelRatio update) ---
     const handleResize = () => {
       const { width, height } = getSize();
       camera.aspect = width / height;

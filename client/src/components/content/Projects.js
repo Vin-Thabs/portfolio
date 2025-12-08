@@ -12,7 +12,7 @@ export default function Projects() {
             short_description: 'AI agent to play soccer against another AI agent/itself',
             long_description: 'The RoboCup 3D Soccer Simulation League, using Hungarian algorithm to find the best position for players, A* for optimal paths to goal',
             tech_stack: ['python', 'C/C++', 'bash'],
-            demo_video: 'https://www.youtube.com/watch?v=fvkqMN-t1l4', //change the link
+            demo_video: 'https://www.youtube.com/embed/vkqMN-t1l4', //change the link
             github: 'https://github.com/Vin-Thabs/RoboCup-AI.git'
         },
         {

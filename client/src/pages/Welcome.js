@@ -74,11 +74,6 @@ export default function Welcome() {
     const particles = new THREE.Points(particleGeometry, particleMaterial);
     scene.add(particles);
 
-    const mouse = { x: 0, y: 0 };
-    window.addEventListener("mousemove", (e) => {
-      mouse.x = (e.clientX / window.innerWidth - 0.5) * 2;
-      mouse.y = -(e.clientY / window.innerHeight - 0.5) * 2;
-    });
 
     const animate = () => {
       requestAnimationFrame(animate);
@@ -88,10 +83,6 @@ export default function Welcome() {
 
       particles.rotation.y += 0.001;
       particles.rotation.x += 0.0005;
-
-
-      camera.position.x += (mouse.x * 1.5 - camera.position.x) * 0.05;
-      camera.position.y += (mouse.y * 1.5 - camera.position.y) * 0.05;
 
       renderer.render(scene, camera);
     };
