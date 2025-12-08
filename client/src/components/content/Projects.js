@@ -41,6 +41,42 @@ export default function Projects() {
             tech_stack: ['ReactJS', 'Express', 'MySQL', 'Azure'],
             demo_video: '',
             github: 'https://github.com/Vin-Thabs/guardia.git'
+        },
+        {
+            id: 5,
+            name: 'Shell Command',
+            short_description: 'Commadn Line Interface(CLI), just a text-based instructions used to perform a task.',
+            long_description: 'A program similar to CLI linux, which uses the System calls to optimize the efficiency. The program just handles the basic CLI instructions.e.g ls (listing), cd  (Changing directories), etc. ',
+            tech_stack: ['C' ,'Bash(Shell scripts)'],
+            demo_video: '',
+            github: 'https://github.com/Vin-Thabs/Wits_Shell_Tester.git'
+        },
+        {
+            id: 6,
+            name: 'Undecidability FOL(First Order Logic)',
+            short_description: 'This Program is splits into two parts, Computation of FOL and Turing Machines with FOL',
+            long_description: 'The First Part, handles the validation of proper formula definition in FOL, Signature, variables, NNF(Negation, Normal-Form) and a Model with formula input. The Second part constructs the Turing Machine with a formula',
+            tech_stack: ['Python'],
+            demo_video: '',
+            github: 'https://github.com/Vin-Thabs/Undecidability_FOL.git'
+        },
+        {
+            id: 7,
+            name: 'Turing Machine Simulator',
+            short_description: 'Designing an encoder and implementing the simulation of Turing Machines',
+            long_description:'This is an implementation of a program that is a two-way Turing Machine, taking in M, a Turing Machine with some string and then Outputs the computation result. Should the computation encouter an error in the machine, it will terminate',
+            tech_stack: ['C++'],
+            demo_video: '',
+            github: 'https://github.com/Vin-Thabs/turing_machine_simulator.git'
+        },
+        {
+            id: 8,
+            name: 'CGV_Game_Design',
+            short_description: 'An attempt at a video game using javascript and webGL to build the game.',
+            long_description:'This a game that was with javascript,  and the game world, and characters where created with Blender(free source software) ',
+            tech_stack: ['Javascript'],
+            demo_video: '',
+            github: 'https://github.com/Vin-Thabs/cgv_game_design.git'
         }
     ];
 
