@@ -35,7 +35,7 @@ export default function TopBar() {
                     <p onClick={() => goTo('/WorkingExperience')}>Working Experience</p>
                     <p onClick={() => goTo('/Skills')}>Skills</p>
                     <p onClick={() => goTo('/Hackathons')}>Hackathons</p>
-                    <p onClick={() => goTo('/AboutMe')}> About Me</p>
+                    {/* <p onClick={() => goTo('/AboutMe')}> About Me</p> */}
                 </div>
             )}
         </div>
