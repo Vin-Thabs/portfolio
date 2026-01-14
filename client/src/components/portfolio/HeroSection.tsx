@@ -18,7 +18,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slide-up font-light" style={{ animationDelay: '0.1s' }}>
-          Software Developer & Problem Solver
+          Software Developer
         </p>
 
         <p className="text-muted-foreground max-w-2xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>

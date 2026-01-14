@@ -40,7 +40,7 @@ const ExperienceSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-foreground">
-                      JUnior Developer
+                      Junior Developer
                     </h3>
                     <p className="text-sm text-primary">Seeking Opportunities</p>
                   </div>
