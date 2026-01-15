@@ -91,18 +91,21 @@ export const projects = [
 ];
 
 export const skills = {
-  languages: ['Python', 'JavaScript', 'TypeScript', 'C/C++', 'Java', 'SQL', 'Bash'],
-  frameworks: ['React', 'Node.js', 'Express', 'Next.js'],
+  languages: ['Python', 'JavaScript', 'PHP', 'C/C++', 'Java', 'SQL', 'Bash'],
+  frameworks: ['React', 'Node.js', 'Express', 'Next.js', 'Angular'],
   tools: ['Git', 'Docker', 'Azure', 'Firebase', 'MySQL', 'PostgreSQL'],
-  concepts: ['Data Structures', 'Algorithms', 'System Design', 'CI/CD', 'TDD', 'Agile']
+  concepts: ['Data Structures', 'Algorithms', 'System Design', 'CI/CD', 'TDD', 'Agile', 'Design Patterns', 'Architecture Styles']
 };
 
 export const experience = [
-  {
+   {
     id: 1,
     role: 'Software Developer',
-    company: 'Tech Company',
-    period: '2023 - Present',
-    description: 'Building scalable web applications and contributing to open-source projects.'
-  }
+    company: 'Junior Dev',
+    period: '2025 - Present',
+    description: 'Passionate about building innovative software solutions. Experienced in competitive programming through hackathons. Looking for opportunities to contribute towards impactful projects.',
+    responsibilities: ['React', 'Python', 'C/C++', 'Azure', 'MySQL']
+
+  },
+ 
 ];
