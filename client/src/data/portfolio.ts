@@ -78,15 +78,6 @@ export const projects = [
     tech_stack: ['C++'],
     demo_video: '',
     github: 'https://github.com/Vin-Thabs/turing_machine_simulator.git'
-  },
-  {
-    id: 8,
-    name: 'CGV Game Design',
-    short_description: 'Video game using JavaScript and WebGL',
-    long_description: 'A game built with javascript, the game world and characters were created with Blender',
-    tech_stack: ['Javascript', 'WebGL', 'Blender'],
-    demo_video: '',
-    github: 'https://github.com/Vin-Thabs/cgv_game_design.git'
   }
 ];
 
