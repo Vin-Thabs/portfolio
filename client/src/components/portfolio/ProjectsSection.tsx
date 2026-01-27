@@ -32,8 +32,9 @@ const ProjectsSection = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-secondary hover:bg-blue
-                                 text-muted-foreground hover:text-white transition-colors"
+                      className="p-2 rounded-lg bg-red-500 hover:bg-red-600
+                                text-white transition-colors"
+
                       aria-label="View on GitHub"
                     >
                       <Github className="w-4 h-4" />
