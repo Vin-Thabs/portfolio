@@ -18,51 +18,15 @@ export const hackathons = [
 export const projects = [
   {
     id: 1,
-    name: 'RoboCup-AI',
-    short_description: 'AI agent to play soccer against another AI agent/itself',
-    long_description: 'The RoboCup 3D Soccer Simulation League, using Hungarian algorithm to find the best position for players, A* for optimal paths to goal',
-    tech_stack: ['Python', 'C/C++', 'Bash'],
+    name: 'Turing Machine Simulator',
+    short_description: 'Encoder and simulation of Turing Machines',
+    long_description: 'Implementation of a two-way Turing Machine, taking in M, a Turing Machine with some string and then Outputs the computation result.',
+    tech_stack: ['C++'],
     demo_video: '',
-    github: 'https://github.com/Vin-Thabs/RoboCup-AI.git'
+    github: 'https://github.com/Vin-Thabs/turing_machine_simulator.git'
   },
   {
     id: 2,
-    name: 'University Research Collaboration Platform',
-    short_description: 'A platform for researchers to find others to collaborate with.',
-    long_description: 'This project, helps researchers to find other researchers to collaborate with, also find research to donate funds to. Export data about research topic.',
-    tech_stack: ['Javascript', 'ReactJs', 'MySQL', 'Azure', 'CI/CD', 'TDD'],
-    demo_video: '',
-    github: 'https://github.com/Vin-Thabs/Uni-Research-Collab-Platform.git'
-  },
-  {
-    id: 3,
-    name: 'FindFunder',
-    short_description: 'Funding Management Software solution used to manage funds',
-    long_description: 'This project is a funding management, for funding for users. Users can donate funds, advertise the program that needs funds, upload PDFs with more information about the project that needs funding',
-    tech_stack: ['ReactJS', 'Azure Functions', 'GitHub Actions', 'Firebase', 'MySQL'],
-    demo_video: '',
-    github: 'https://github.com/Vin-Thabs/funding-management.git'
-  },
-  {
-    id: 4,
-    name: 'Gurdia',
-    short_description: 'Web app to minimize crime risks in certain areas',
-    long_description: "Users can view high-risk zones, recent incidents reports, and receive route safety recommendations, empowering them to make informed decisions. Especially against women and children.",
-    tech_stack: ['ReactJS', 'Express', 'MySQL', 'Azure'],
-    demo_video: '',
-    github: 'https://github.com/Vin-Thabs/guardia.git'
-  },
-  {
-    id: 5,
-    name: 'Shell Command',
-    short_description: 'CLI text-based instructions to perform tasks',
-    long_description: 'A program similar to CLI linux, which uses the System calls to optimize the efficiency. The program handles basic CLI instructions like ls, cd, etc.',
-    tech_stack: ['C', 'Bash'],
-    demo_video: '',
-    github: 'https://github.com/Vin-Thabs/Wits_Shell_Tester.git'
-  },
-  {
-    id: 6,
     name: 'Undecidability FOL',
     short_description: 'Computation of FOL and Turing Machines with FOL',
     long_description: 'Handles validation of proper formula definition in FOL, Signature, variables, NNF and a Model with formula input. Constructs Turing Machine with a formula.',
@@ -71,14 +35,51 @@ export const projects = [
     github: 'https://github.com/Vin-Thabs/Undecidability_FOL.git'
   },
   {
-    id: 7,
-    name: 'Turing Machine Simulator',
-    short_description: 'Encoder and simulation of Turing Machines',
-    long_description: 'Implementation of a two-way Turing Machine, taking in M, a Turing Machine with some string and then Outputs the computation result.',
-    tech_stack: ['C++'],
+    id: 3,
+    name: 'Shell Command',
+    short_description: 'CLI text-based instructions to perform tasks',
+    long_description: 'A program similar to CLI linux, which uses the System calls to optimize the efficiency. The program handles basic CLI instructions like ls, cd, etc.',
+    tech_stack: ['C', 'Bash'],
     demo_video: '',
-    github: 'https://github.com/Vin-Thabs/turing_machine_simulator.git'
+    github: 'https://github.com/Vin-Thabs/Wits_Shell_Tester.git'
+  },
+  {
+    id: 4,
+    name: 'RoboCup-AI',
+    short_description: 'AI agent to play soccer against another AI agent/itself',
+    long_description: 'The RoboCup 3D Soccer Simulation League, using Hungarian algorithm to find the best position for players, A* for optimal paths to goal',
+    tech_stack: ['Python', 'C/C++', 'Bash'],
+    demo_video: '',
+    github: 'https://github.com/Vin-Thabs/RoboCup-AI.git'
+  },
+  {
+    id: 5,
+    name: 'University Research Collaboration Platform',
+    short_description: 'A platform for researchers to find others to collaborate with.',
+    long_description: 'This project, helps researchers to find other researchers to collaborate with, also find research to donate funds to. Export data about research topic.',
+    tech_stack: ['Javascript', 'ReactJs', 'MySQL', 'Azure', 'CI/CD', 'TDD'],
+    demo_video: '',
+    github: 'https://github.com/Vin-Thabs/Uni-Research-Collab-Platform.git'
+  },
+  {
+    id: 6,
+    name: 'FindFunder',
+    short_description: 'Funding Management Software solution used to manage funds',
+    long_description: 'This project is a funding management, for funding for users. Users can donate funds, advertise the program that needs funds, upload PDFs with more information about the project that needs funding',
+    tech_stack: ['ReactJS', 'Azure Functions', 'GitHub Actions', 'Firebase', 'MySQL'],
+    demo_video: '',
+    github: 'https://github.com/Vin-Thabs/funding-management.git'
+  },
+  {
+    id: 7,
+    name: 'Gurdia',
+    short_description: 'Web app to minimize crime risks in certain areas',
+    long_description: "Users can view high-risk zones, recent incidents reports, and receive route safety recommendations, empowering them to make informed decisions. Especially against women and children.",
+    tech_stack: ['ReactJS', 'Express', 'MySQL', 'Azure'],
+    demo_video: '',
+    github: 'https://github.com/Vin-Thabs/guardia.git'
   }
+  
 ];
 
 export const skills = {
